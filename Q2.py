@@ -9,7 +9,6 @@ def extract_sample_name(file_name):
         return match.group(2) 
     else: 
         return "no" 
-
 files = [ 
     "lane1_NewCode_L001_R1.fastq.gz", 
     "lane1_NoIndex_L001_R1.fastq.gz", 
@@ -23,7 +22,6 @@ files = [
     "lane7127_GGCTAC_E30_1_4_Hap4_48h_L001_R1.fastq.gz", 
     "lane8127_GCCAAT_S30_1_2l_Hap4_log_L001_R1.fastq.gz" 
 ] 
-
 sample_names = [extract_sample_name(file_name) for file_name in files] 
 for file_name, sample_name in zip(files, sample_names): 
-    print(f"{file_name} -> {sample_name}") 
+    print(f"{file_name} -> {sample_name}")  
