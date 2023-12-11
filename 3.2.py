@@ -27,18 +27,17 @@ def parse_pubmed_records(records):
  
 if __name__ == "__main__": 
     query = "Alzheimer's" 
- 
-# Search PubMed 
+
 search_results = search_pubmed(query) 
-# Print the total articles  
+
 total_articles = int(search_results["Count"]) 
 print(f"Total number of articles related to Alzheimer's: {total_articles}") 
  
 id_list = search_results["IdList"][:10]   
 pubmed_records = fetch_pubmed_details(id_list) 
-# Parse and print authors 
+
 authors_list = parse_pubmed_records(pubmed_records) 
-# Print authors  
+ 
 for i, authors in enumerate(authors_list, 1): 
     print(f"\nAuthors for Article {i}:") 
     for author in authors: 
