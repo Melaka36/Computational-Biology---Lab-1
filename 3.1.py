@@ -20,7 +20,6 @@ codon_table = {
 
 dna_sequence = input("Enter DNA sequence: ")
 
-
 if not all(c in "ACTG" for c in dna_sequence):
     print("Invalid DNA sequence. Please enter a valid sequence.")
     exit()
@@ -33,6 +32,5 @@ protein_sequence = ""
 for i in range(0, len(dna_sequence), 3):
     codon = dna_sequence[i:i+3]
     protein_sequence += codon_table[codon]
-
 
 print("Protein sequence:", protein_sequence)
