@@ -24,7 +24,7 @@ re.finditer(f'(?={consensus_sequence})', sequence)]
         if matches: 
             positions[tf] = matches 
     return positions 
- 
+
 if __name__ == "__main__": 
     search_seq = """ 
     GACACCTCAGTACTAGGATGNNNNNNTATCAGCCTGAACTAGCAGGCCTGGTTCCAAATT 
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         "TGIF1": "WGACAGB", 
         "IKZF1": "BTGGGARD" 
     } 
- 
+
     positions = search_tfbs(search_seq, tfbs_dict) 
  
     for tf, tf_positions in positions.items(): 
